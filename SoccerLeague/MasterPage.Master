@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="SoccerLeague.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Soccer League</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>            
+        <img src="images.jpg" id ="image" height="250px" width="1350px" />
+      <nav id="navigation">
+            <a href="Home.aspx">Home</a>
+            <a href="Addclub1.aspx">Add Club</a>
+            <a href="Clubs.aspx">clubs</a>
+            <a href="Matchscheduling.aspx">Match scheduling</a>
+            <a href="Results.aspx">Results</a>
+        </nav>
+        </header>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+</body>
+</html>
