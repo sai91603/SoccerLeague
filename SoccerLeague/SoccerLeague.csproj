@@ -66,8 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddClub1.aspx" />
     <Content Include="App_Themes\Dark\Dark.css" />
     <Content Include="App_Themes\Light\Light.css" />
+    <Content Include="Clubs.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
@@ -79,9 +81,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MatchScheduling.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClub1.aspx.cs">
+      <DependentUpon>AddClub1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddClub1.aspx.designer.cs">
+      <DependentUpon>AddClub1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clubs.aspx.cs">
+      <DependentUpon>Clubs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clubs.aspx.designer.cs">
+      <DependentUpon>Clubs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +112,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MatchScheduling.aspx.cs">
+      <DependentUpon>MatchScheduling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatchScheduling.aspx.designer.cs">
+      <DependentUpon>MatchScheduling.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
