@@ -21,3 +21,4 @@ namespace SoccerLeague
             Response.Redirect("setup.aspx");
         }
     }
+}
