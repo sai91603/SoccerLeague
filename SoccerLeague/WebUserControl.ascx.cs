@@ -11,28 +11,17 @@ public partial class WebUserControl : System.Web.UI.UserControl
     {
 
     }
- 
+
     public string Name
     {
-        get
-        {
-            return TxtName.Text;
-        }
-        set
-        {
-            this.TxtName.Text = value;
-        }
+        get { return clubName.Text; }
+        set { clubName.Text = value; }
     }
+
     public string City
     {
-        get
-        {
-            return TxtCity.Text;
-        }
-        set
-        {
-            this.TxtCity.Text = value;
-        }
+        get { return cityName.Text; }
+        set { cityName.Text = value; }
     }
 
 }
