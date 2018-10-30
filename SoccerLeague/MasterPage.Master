@@ -1,32 +1,57 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="SoccerLeague.MasterPage" %>
 
+<link href="/StyleSheet/StyleSheet.css" type="text/css" rel="stylesheet" />
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>Soccer League</title>
-    <link href="StyleSheet.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder id="head" runat="server">
+
+    <title>Soccer League </title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>            
-        <img src="images.jpg" id ="image" height="250px" width="1350px" />
-      <nav id="navigation">
-            <a href="Home.aspx">Home</a>
-            <a href="Addclub1.aspx">Add Club</a>
-            <a href="Clubs.aspx">clubs</a>
-            <a href="Matchscheduling.aspx">Match scheduling</a>
-        </nav>
-        </header>
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
-        
-        </asp:ContentPlaceHolder>
-    </div>
+             <div class="banner">
+                <h1>Soccer League</h1>
+          
+            <asp:LoginView ID="LoginView1" runat="server">
+                <LoggedInTemplate>
+                    <asp:LoginName ID="loginName" runat="server" FormatString="Hello, {0}!" BackColor="White" />
+                    (<asp:LoginStatus ID="loginStatus" runat="server" />
+                    )
+                </LoggedInTemplate>
+
+                <AnonymousTemplate>
+                    <asp:LoginStatus ID="loginStatus" runat="server" BackColor="White" />
+                </AnonymousTemplate>
+            </asp:LoginView>
+
+            <div class="NavBar">
+                <ul>
+                    <li><a href="/Home.aspx">Home</a></li>
+                    <li><a href="/Pages/Clubs.aspx">Clubs</a></li>
+                    <li><a href="/Pages/Addclub.aspx">AddClubs</a></li>
+                    <li><a href="/Pages/MatchScheduling.aspx">MatchScheduling</a></li>
+                    <li><a href="/Pages/Results.aspx">Results</a></li>
+
+
+                </ul>
+            </div>
+            </div>
+       
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">All rights reserved. Powered by 300991463 </div>
     </form>
-    
+
 </body>
 </html>
