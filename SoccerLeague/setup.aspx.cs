@@ -9,24 +9,24 @@ namespace SoccerLeague
 {
     public partial class setup : System.Web.UI.Page
     {
+        string Name;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        public void Page_PreInit()
+        protected void Page_PreInit(object sender, EventArgs e)
         {
-            if (Request.QueryString["Theme"] != null)
+            if (Session["Theme"] != null)
             {
-                Page.Theme = Request.QueryString["Theme"].ToString();
+                this.Theme = Session["Theme"].ToString();
             }
+           
         }
-
-
-
-        protected void ddlThemes_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string name = ddlThemes.SelectedItem.Value;
-            Response.Redirect("~/setup.aspx?Theme=" + name);
+            Name = DropDownList1.SelectedItem.Text;
+            Session["Theme"] = Name;
+            Response.Redirect("/setup.aspx");
         }
     }
 }

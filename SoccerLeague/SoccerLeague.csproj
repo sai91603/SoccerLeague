@@ -71,7 +71,6 @@
     <Content Include="App_Themes\Light\Light.css" />
     <Content Include="Clubs.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="images.jpg" />
     <Content Include="Images\abigail-keenan-17652-unsplash.jpg" />
     <Content Include="Images\jannes-glas-548485-unsplash %281%29.jpg" />
     <Content Include="Images\julien-rocheblave-524896-unsplash.jpg" />

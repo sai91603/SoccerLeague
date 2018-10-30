@@ -9,16 +9,24 @@ namespace SoccerLeague
 {
     public partial class Home : System.Web.UI.Page
     {
-        public void Page_PreInit()
+        protected void Page_PreInit(object sender, EventArgs e)
         {
             if (Session["Theme"] != null)
             {
                 this.Theme = Session["Theme"].ToString();
             }
         }
-        protected void changetheme(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("setup.aspx");
+
         }
+
+        protected void btnChangeTheme_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/setup.aspx");
+        }
+       
+        
+        
     }
 }
