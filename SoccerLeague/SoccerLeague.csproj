@@ -72,6 +72,13 @@
     <Content Include="Clubs.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images.jpg" />
+    <Content Include="Images\abigail-keenan-17652-unsplash.jpg" />
+    <Content Include="Images\jannes-glas-548485-unsplash %281%29.jpg" />
+    <Content Include="Images\julien-rocheblave-524896-unsplash.jpg" />
+    <Content Include="Images\mpho-mojapelo-127562-unsplash.jpg" />
+    <Content Include="Images\photo-1514514757092-71ebbc3db4e6.jpg" />
+    <Content Include="Images\rob-bye-141866-unsplash.jpg" />
+    <Content Include="Images\stock-vector-set-of-soccer-football-crests-and-logo-emblem-designs-football-championship-emblem-design-elements-337279580.jpg" />
     <Content Include="MasterPage.Master" />
     <Content Include="WebUserControl.ascx" />
     <None Include="packages.config" />
@@ -137,9 +144,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
