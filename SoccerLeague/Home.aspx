@@ -1,13 +1,77 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="SoccerLeague.Home" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    
+    <style type="text/css">
+        .auto-style1 {
+            color: #FFFF99;
+        }
+
+        .auto-style2 {
+            color: #FFFFFF;
+        }
+
+        .auto-style3 {
+            text-decoration: underline;
+        }
+
+        .auto-style4 {
+            color: #E9E581;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .auto-style5 {
+            text-align: center;
+        }
+
+        .auto-style6 {
+            text-decoration: underline;
+            text-align: center;
+            color: #E9E581;
+            font-weight: bold;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="auto-style1">
+    </div>
+    <article class="content">
+        <asp:Button ID="btnChangeTheme" runat="server" CssClass="button" Text="Change Theme" OnClick="btnChangeTheme_Click" />
+        <div class="auto-style2" style="padding: -20px">
+            <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large; text-align: center" class="auto-style2">Add, Manage and View </h1>
+            <h2 style="color: #E9E581; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large; text-align: center">Clubs & Players</h2>
+        </div>
+        <div>
+
+            <table align="center" cellpadding="8" cellspacing="5" class="auto-style2">
+                <tr>
+                    <td class="auto-style6">
+                        <h1 class="auto-style3">Clubs</h1>
+                    </td>
+                    <td class="auto-style5">
+                        <h1 class="auto-style3">Add Club</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">Page that enables a user to see the clubs in the league.</td>
+                    <td class="auto-style4">Page that enables a user to include a details of clubs and players </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">
+                        <h1 class="auto-style3">Results</h1>
+                    </td>
+                    <td class="auto-style5">
+                        <h1 class="auto-style3">Scheduling</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">Page that enables a user to see the results of the matches</td>
+                    <td class="auto-style4">Page that enables a client to plan the matches</td>
+                </tr>
+            </table>
+
+        </div>
+    </article>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <article>
-  <h2>Soccer League</h2>
-        <p>
-            <asp:Button ID="Btntheme" runat="server" Text="Choose theme"  OnClick="changetheme"/>
-        </p>
-  <p>Most soccer playing nations have a domestic league in which teams associated with their home cities vie against each other for the league championship. Players from all over the world can sign on to these teams, although some leagues have rules requiring a minimum number of players from the league's home country per team. Many domestic leagues emulate the system used in England.The English Premier League, by some estimates the most successful and popular sports league in the world, is the highest tier of professional football in that country. Below it is the Coca Cola Championship League; also know as the First Division. There are also second and third division teams, as well as regional leagues. The key to the whole system is the concept of promotion and relegation. At the end of the season, the bottom three teams in any division are 'relegated,' or sent down to the next lowest division, where they will compete next season. The top three teams of a division (except for the Premier League) are 'promoted' into the next higher division. Usually, the top two teams are automatically promoted while the next four teams compete in a playoff for the remaining promotion spot. Being promoted to a higher division means a major boost in television coverage and the resulting revenue.</p>
-</article>
-</asp:Content>

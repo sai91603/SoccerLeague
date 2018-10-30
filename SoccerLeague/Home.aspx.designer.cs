@@ -13,12 +13,12 @@ namespace SoccerLeague {
     public partial class Home {
         
         /// <summary>
-        /// Btntheme control.
+        /// btnChangeTheme control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btntheme;
+        protected global::System.Web.UI.WebControls.Button btnChangeTheme;
     }
 }
