@@ -2,26 +2,67 @@
 
 <%@ Register src="WebUserControl.ascx" tagname="WebUserControl" tagprefix="uc1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .textbox {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            padding: 14px 20px;
+            margin: 3px 0;
+            border: none;
+            opacity: 0.9;
+        }
+
+            .button:hover {
+                opacity: 1;
+            }
+
+        .buttons {
+            margin-left: 20px;
+        }
+
+        label {
+            color: #F6F6F6;
+        }
+    </style>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <uc1:WebUserControl ID="WebUserControl1" runat="server" />
-    <asp:Panel ID="Panel1" runat="server">
-        
-    <asp:Label ID="Lblregistration" runat="server" Text="Registration Number:"></asp:Label>
-    <asp:TextBox ID="Txtregistration" runat="server"></asp:TextBox>  
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter ur registration number" ControlToValidate="Txtregistration" ForeColor="Red"></asp:RequiredFieldValidator>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="content">
+
+        <h1>Enter Club Details</h1>
+        <p>Please fill in this form to create new club.</p>
+        <hr />
+
+
+        <uc1:WebUserControl runat="server" ID="WebUserControl" />
+        <label for="regNo">
+            <b>Registration Number<br />
+            </b>
+        </label>
+        <asp:TextBox CssClass="textbox" ID="registrationNumber" placeholder="Registration number" runat="server"></asp:TextBox>
+        <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer"
+            ControlToValidate="registrationNumber" ValidationGroup="valSaveClub" ForeColor="Red" ErrorMessage="Value must be a whole number" Display="Dynamic" />
+        <asp:RequiredFieldValidator ID="reqRegistrationNumber" ControlToValidate="registrationNumber" ForeColor="Red"
+            ValidationGroup="valSaveClub" runat="server" ErrorMessage="*Required Registration Number" Display="Dynamic"></asp:RequiredFieldValidator>
+
+
+        <label for="address">
+            <b>
+                <br />
+                Address</b></label>
+        <br />
+        <asp:TextBox placeholder="Address" CssClass="textbox" ID="address" runat="server"></asp:TextBox>
+    
         <br />
         <br />
-    <asp:Label ID="LblAddress" runat="server" Text="Address:"></asp:Label>
-    <asp:TextBox ID="TxtAddress" runat="server" Rows="5"></asp:TextBox>
-        <br />
-        <br />
-    <br />
-    <asp:Button ID="Btnsave" runat="server" Text="save club" OnClick="Btnsave_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Btncancel" runat="server" Text="cancel" OnClick="Btncancel_Click"  />
-        <br />
-        <br />
-    <br />
+        <asp:Button ID="saveClub" runat="server" CssClass="button" Text="Save Club" ValidationGroup="valSaveClub" OnClick="saveClub_Click" />
+         <asp:Button CssClass="button" ID="btnCancelClub" value="cancel" runat="server" Text="Cancel" OnClick="Cancel" />
