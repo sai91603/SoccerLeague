@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//Name:Sai Charan Mittapalli Id:300973365
+
 public partial class WebUserControl : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-    //Name:Sai Charan Mittapalli Id:300973365
+ 
     public string Name
     {
         get
@@ -36,4 +36,4 @@ public partial class WebUserControl : System.Web.UI.UserControl
     }
 
 }
-//Name:Sai Charan Mittapalli Id:300973365
+

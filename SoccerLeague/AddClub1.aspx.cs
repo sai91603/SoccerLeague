@@ -13,5 +13,15 @@ namespace SoccerLeague
         {
 
         }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+
+            if (Session["Theme"] != null)
+            {
+                this.Theme = Session["Theme"].ToString();
+            }
+        }
+
     }
 }
