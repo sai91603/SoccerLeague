@@ -35,10 +35,9 @@
                 <ul>
                     <li><a href="/Home.aspx">Home</a></li>
                     <li><a href="/Pages/Clubs.aspx">Clubs</a></li>
-                    <li><a href="/Pages/Addclub.aspx">AddClubs</a></li>
+                    <li><a href="/Pages/Addclub1.aspx">AddClubs</a></li>
                     <li><a href="/Pages/MatchScheduling.aspx">MatchScheduling</a></li>
-                    <li><a href="/Pages/Results.aspx">Results</a></li>
-
+                  
 
                 </ul>
             </div>
