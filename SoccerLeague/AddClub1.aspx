@@ -66,3 +66,36 @@
         <br />
         <asp:Button ID="saveClub" runat="server" CssClass="button" Text="Save Club" ValidationGroup="valSaveClub" OnClick="saveClub_Click" />
          <asp:Button CssClass="button" ID="btnCancelClub" value="cancel" runat="server" Text="Cancel" OnClick="Cancel" />
+
+        <asp:Button ID="addPlayer" runat="server" CssClass="button" OnClick="addPlayer_Click" Text="Add Player" Visible="False" />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <div id="PlayerInfo" visible="false" runat="server">
+        <fieldset>
+            <h2><b>Add Player</b></h2>
+            <p>Please fill in this form to add new players.</p>
+            <hr />
+            <div>
+
+                <label for="playerName"><b>Player Name:</b></label>
+                <br />
+                <asp:TextBox ID="txtPlayerName" CssClass="textbox" runat="server"></asp:TextBox>
+            </div>
+            <div>
+
+                <label for="DOB"><b>Date of Birth:</b></label>
+                <br />
+                <asp:Calendar ID="calDOB" runat="server" Visible="False" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+                    <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+                    <OtherMonthDayStyle ForeColor="#999999" />
+                    <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                    <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+                    <TodayDayStyle BackColor="#CCCCCC" />
+                </asp:Calendar>
+
+                <asp:TextBox ID="txtDOB" CssClass="textbox" runat="server"></asp:TextBox>
+                <asp:LinkButton ID="PickDate" runat="server" OnClick="SelectDate">Pick Date</asp:LinkButton>
