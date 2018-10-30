@@ -84,6 +84,7 @@
   <ItemGroup>
     <Content Include="MatchScheduling.aspx" />
     <Content Include="setup.aspx" />
+    <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
