@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="SoccerLeague.MasterPage" %>
 
-<link href="/StyleSheet/StyleSheet.css" type="text/css" rel="stylesheet" />
+<link href="/StyleSheet.css" type="text/css" rel="stylesheet" />
 
 <!DOCTYPE html>
 

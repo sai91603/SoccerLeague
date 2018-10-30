@@ -37,7 +37,8 @@
     <div class="auto-style1">
     </div>
     <article class="content">
-        <asp:Button ID="btnChangeTheme" runat="server" CssClass="button" Text="Change Theme" OnClick="btnChangeTheme_Click" />
+       <asp:Button ID="Btntheme" runat="server" Text="Change Theme"  OnClick="changetheme" CssClass="button" />
+     
         <div class="auto-style2" style="padding: -20px">
             <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large; text-align: center" class="auto-style2">Add, Manage and View </h1>
             <h2 style="color: #E9E581; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large; text-align: center">Clubs & Players</h2>

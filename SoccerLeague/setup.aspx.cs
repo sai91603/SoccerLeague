@@ -22,9 +22,9 @@ namespace SoccerLeague
             }
            
         }
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlThemes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Name = DropDownList1.SelectedItem.Text;
+            Name = ddlThemes.SelectedItem.Text;
             Session["Theme"] = Name;
             Response.Redirect("/setup.aspx");
         }

@@ -7,7 +7,7 @@
         <hr />
         <h3>Select Theme</h3>
         <p>
-            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
+            <asp:DropDownList ID="ddlThemes" runat="server" OnSelectedIndexChanged="ddlThemes_SelectedIndexChanged" AutoPostBack="True">
                 <asp:ListItem>Select</asp:ListItem>
                 <asp:ListItem>Light</asp:ListItem>
                 <asp:ListItem>Dark</asp:ListItem>

@@ -5,8 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SoccerLeague
-{
+
     public partial class Home : System.Web.UI.Page
     {
         protected void Page_PreInit(object sender, EventArgs e)
@@ -20,13 +19,16 @@ namespace SoccerLeague
         {
 
         }
-
-        protected void btnChangeTheme_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/setup.aspx");
-        }
-       
-        
-        
+    protected void changetheme(object sender, EventArgs e)
+    {
+        Response.Redirect("setup.aspx");
     }
+
+    //protected void btnChangeTheme_Click(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("~/setup.aspx");
+    //}
+
+
+
 }
