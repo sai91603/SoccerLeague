@@ -99,3 +99,28 @@
 
                 <asp:TextBox ID="txtDOB" CssClass="textbox" runat="server"></asp:TextBox>
                 <asp:LinkButton ID="PickDate" runat="server" OnClick="SelectDate">Pick Date</asp:LinkButton>
+
+
+                </div>
+            <div>
+                <label for="jersyNumber"><b>Jersy Number:</b></label>
+                <br />
+                <asp:TextBox ID="txtJersyNumber" CssClass="textbox" runat="server"></asp:TextBox>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ValidationGroup="valPlayer"
+                    ErrorMessage="Between 0-99" ControlToValidate="txtJersyNumber"
+                    ForeColor="#FF3300" MaximumValue="99" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer"
+                    ControlToValidate="txtJersyNumber" ValidationGroup="valPlayer" ForeColor="Red" ErrorMessage="Value must be a whole number" Display="Dynamic" />
+            </div>
+            <div>
+                <label></label>
+                <asp:Button CssClass="button" ID="savePlayer" runat="server" Text="Save Player" OnClick="SavePlayer" ValidationGroup="valPlayer" />
+
+                <asp:Button CssClass="button" ID="cancel" value="cancel" runat="server" Text="Cancel" OnClick="Cancel" />
+                <asp:TextBox ID="success" runat="server" Visible="false" BackColor="#FF3300" ForeColor="#FFFFCC">Player Saved</asp:TextBox>
+            </div>
+        </fieldset>
+
+
+    </div>
+</asp:Content>
