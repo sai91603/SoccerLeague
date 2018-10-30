@@ -81,4 +81,68 @@ namespace SoccerLeague
 
 
     }
+
+    protected void addPlayer_Click(object sender, EventArgs e)
+    {
+
+        PlayerInfo.Visible = true;
+        txtPlayerName.Focus();
+
+    }
+    protected void SelectDate(object sender, EventArgs e)
+    {
+
+        // addPlayer.Visible = true;
+        if (txtDOB.Text != string.Empty)
+            calDOB.SelectedDate = Convert.ToDateTime(txtDOB.Text);
+
+        calDOB.Visible = true;
+        calDOB.Focus();
+    }
+    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+    {
+        //addPlayer.Visible = true;
+        calDOB.Focus();
+        txtDOB.Text = calDOB.SelectedDate.ToLongDateString();
+        calDOB.Visible = false;
+
+    }
+    protected void SavePlayer(object sender, EventArgs e)
+    {
+        String PlayerName = txtPlayerName.Text;
+        int JersyNumber = int.Parse(txtJersyNumber.Text);
+        DateTime DOB = calDOB.SelectedDate;
+        ClubID = Session["ClubID"].ToString();
+        string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand("spAddPlayer", connection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@PlayerName", PlayerName);
+            command.Parameters.AddWithValue("@DateOfBirth", DOB);
+            command.Parameters.AddWithValue("@JerseyNumber", JersyNumber);
+            command.Parameters.AddWithValue("@ClubID", int.Parse(ClubID));
+            connection.Open();
+            command.ExecuteNonQuery();
+
+
+        }
+        txtPlayerName.Text = "";
+        txtJersyNumber.Text = "";
+        txtDOB.Text = "";
+        success.Visible = true;
+
+    }
+
+
+    protected void Cancel(object sender, EventArgs e)
+    {
+        PlayerInfo.Visible = false;
+        WebUserControl.Name = "";
+        WebUserControl.City = "";
+        registrationNumber.Text = "";
+        address.Text = "";
+    }
+}
 }
