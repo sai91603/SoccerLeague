@@ -73,6 +73,7 @@
     <Content Include="Home.aspx" />
     <Content Include="images.jpg" />
     <Content Include="MasterPage.Master" />
+    <Content Include="WebUserControl.ascx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -130,6 +131,10 @@
     </Compile>
     <Compile Include="setup.aspx.designer.cs">
       <DependentUpon>setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl.ascx.cs">
+      <DependentUpon>WebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
