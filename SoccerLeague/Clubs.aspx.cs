@@ -45,3 +45,4 @@ namespace SoccerLeague
             Response.Redirect("~/Pages/ClubDetails.aspx");
         }
     }
+}
