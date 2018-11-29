@@ -81,6 +81,7 @@
     <Content Include="MasterPage.Master" />
     <Content Include="Register.aspx" />
     <Content Include="Results.aspx" />
+    <Content Include="UpdateScore.aspx" />
     <Content Include="WebUserControl.ascx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -153,6 +154,13 @@
     </Compile>
     <Compile Include="setup.aspx.designer.cs">
       <DependentUpon>setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateScore.aspx.cs">
+      <DependentUpon>UpdateScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateScore.aspx.designer.cs">
+      <DependentUpon>UpdateScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebUserControl.ascx.cs">
       <DependentUpon>WebUserControl.ascx</DependentUpon>
