@@ -79,6 +79,7 @@
     <Content Include="Images\rob-bye-141866-unsplash.jpg" />
     <Content Include="Images\stock-vector-set-of-soccer-football-crests-and-logo-emblem-designs-football-championship-emblem-design-elements-337279580.jpg" />
     <Content Include="MasterPage.Master" />
+    <Content Include="Register.aspx" />
     <Content Include="WebUserControl.ascx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -131,6 +132,13 @@
       <DependentUpon>MatchScheduling.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="setup.aspx.cs">
       <DependentUpon>setup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
