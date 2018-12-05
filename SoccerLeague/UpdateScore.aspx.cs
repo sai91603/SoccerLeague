@@ -165,6 +165,21 @@ namespace SoccerLeague
             {
                 Response.Redirect("~/Pages/UpdateScore.aspx");
             }
-        }
+            protected void DropDownListDate_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                if (DropDownListDate.SelectedIndex != 0)
+                {
+
+                    DateTime MatchDate = Convert.ToDateTime(DropDownListDate.SelectedValue.ToString());
+                    if (MatchDate <= DateTime.Today)
+                    {
+                        DateErrorMessage.Visible = false;
+                    }
+                    else
+                    {
+                        DateErrorMessage.Visible = true;
+                    }
+                }
+            }
     }
 }
