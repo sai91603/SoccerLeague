@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div class="content">
-        <%--Nithin Kumar Kollerethu Suresh - 300991463--%>
+        
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="6" GridLines="None" CellSpacing="4" ForeColor="#333333" HorizontalAlign="Left" ToolTip="Club Name &amp; City" Width="80%">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
@@ -31,7 +31,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div class="content">
-        <%--Nithin Kumar Kollerethu Suresh - 300991463--%>
+       
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="6" GridLines="None" CellSpacing="4" ForeColor="#333333" HorizontalAlign="Left" ToolTip="Club Name &amp; City" Width="80%">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
