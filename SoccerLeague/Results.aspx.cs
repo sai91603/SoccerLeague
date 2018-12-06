@@ -35,5 +35,9 @@ namespace SoccerLeague
                 }
             }
         }
+        protected void buttonUpdateScore_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UpdateScore.aspx");
+        }
     }
 }
