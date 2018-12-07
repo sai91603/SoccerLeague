@@ -107,7 +107,60 @@ namespace SoccerLeague
                 guestError.Visible = true;
                 guestError.Text = "Select Proper Guest Club";
             }
+            protected void Button1_Click(object sender, EventArgs e)
+            {
 
+                if (DropDownListDate.SelectedIndex != 0 && DropDownListGuestClub.SelectedIndex != 0 && DropDownListHostClub.SelectedIndex != 0)
+                {
+
+                    string selectedHostClub = DropDownListHostClub.SelectedValue.ToString();
+                    string selectedGuestClub = DropDownListGuestClub.SelectedValue.ToString();
+                    int HostScore = int.Parse(HostScoreTextBox.Text.ToString());
+                    int GuestScore = int.Parse(GuestScoreTextBox.Text.ToString());
+                    DateTime MatchDate = Convert.ToDateTime(DropDownListDate.SelectedValue.ToString());
+
+                    if (MatchDate <= DateTime.Today)
+                    {
+
+                        string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+
+                            SqlCommand command = new SqlCommand("spUpdateScore", connection);
+                            command.CommandType = System.Data.CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@HostClub", selectedHostClub);
+                            command.Parameters.AddWithValue("@GuestClub", selectedGuestClub);
+                            command.Parameters.AddWithValue("@DateOfMatch", MatchDate);
+                            command.Parameters.AddWithValue("@HostScore", HostScore);
+                            command.Parameters.AddWithValue("@GuestScore", GuestScore);
+
+                            connection.Open();
+                            command.ExecuteReader();
+
+
+                        }
+                        Response.Redirect("~/Pages/UpdateScore.aspx");
+                    }
+                    else
+                    {
+                        DateErrorMessage.Visible = true;
+                        DateErrorMessage.Text = "*Select Date below " + DateTime.Today;
+                    }
+                }
+                else
+                {
+                    if (DropDownListHostClub.SelectedIndex == 0)
+                    {
+                        hostError.Visible = true;
+                        hostError.Text = "Select Proper Host Club";
+                    }
+                    else if (DropDownListGuestClub.SelectedIndex == 0)
+                        guestError.Visible = true;
+                    guestError.Text = "Select Proper Guest Club";
+                }
+
+            }
 
         }
     }
